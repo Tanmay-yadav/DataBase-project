@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Bike Price Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000000; /* Dark background */
+            color: #ffffff; /* Light text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Old Bike Price Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <div class="form-group">
+                <label for="Kms_Driven">Kilometers Driven:</label>
+                <input type="number" class="form-control" id="Kms_Driven" name="Kms_Driven" required>
+            </div>
+            <div class="form-group">
+                <label for="owner">Number of Owners:</label>
+                <input type="number" class="form-control" id="owner" name="owner" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age of the Bike (years):</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="power">Power (cc):</label>
+                <input type="number" class="form-control" id="power" name="power" required>
+            </div>
+            <div class="form-group">
+                <label for="brand_name">Brand:</label>
+                <select class="form-control" id="brand_name" name="brand_name" required>
+                    <option value="Royal Enfield">Royal Enfield</option>
+                    <option value="KTM">KTM</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Harley">Harley</option>
+                    <option value="Yamaha">Yamaha</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="TVS">TVS</option>
+                    <option value="Kawasaki">Kawasaki</option>
+                    <option value="Hyosung">Hyosung</option>
+                    <option value="Benelli">Benelli</option>
+                    <option value="Mahindra">Mahindra</option>
+                    <option value="Triumph">Triumph</option>
+                    <option value="Ducati">Ducati</option>
+                    <option value="BMW">BMW</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

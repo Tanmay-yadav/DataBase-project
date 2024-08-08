@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #f7f7f7;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .navbar a {
+            color: #f7f7f7;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            color: #f7f7f7;
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .section h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .central-box {
+            background-color: #fff;
+            color: #333;
+            border-radius: 8px;
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .project-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .thanking-container {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .thanking-container h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .thanking-container p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-card {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-card img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .section:not(.visible) {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="project" class="section">
+        <div class="central-box">
+            <h1>Customer Satisfaction</h1>
+            <p>We utilize advanced analytics to predict and improve customer satisfaction. Explore our project to learn more about our approach and findings.</p>
+            <a href="/project" class="project-btn">Explore Project</a>
+        </div>
+    </div>
+
+    <div id="thanking" class="thanking-container">
+        <h1>Thank You!</h1>
+        <p>Thank you for giving your time to us. We look forward to meeting you again!</p>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

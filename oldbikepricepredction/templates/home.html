@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Bike Price Prediction App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9ecef; /* Soft grey background */
+            color: #495057; /* Darker grey text */
+            font-family: 'Lato', sans-serif; /* New font */
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff6f61; /* Coral background for header */
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+        .header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 0;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+        .features {
+            padding: 50px 0;
+        }
+        .feature-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px 0;
+        }
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .feature-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .steps {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .steps h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .step-item {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .step-item i {
+            font-size: 3rem;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+        .step-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .step-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Old Bike Price Prediction App</h1>
+            <p>Get an accurate prediction of your old bike's market value in just a few clicks.</p>
+            <a href="{{ url_for('predict') }}" class="btn btn-custom">Start Now</a>
+        </div>
+    </header>
+
+    <section class="features container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Advanced AI</h3>
+                    <p>Leverage cutting-edge algorithms for precise price estimations.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Data Security</h3>
+                    <p>Your information is encrypted and securely processed.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access the app seamlessly across all devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="row">
+                <div class="col-md-4 step-item">
+                    <i class="fas fa-motorcycle"></i>
+                    <h4>Step 1: Enter Details</h4>
+                    <p>Provide your bike's details such as model, year, and condition.</p>
+                </div>
+                <div class="col-md-4 step-item">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Step 2: Processing</h4>
+                    <p>Our AI processes your data and analyzes market trends.</p>
+                </div>
+                <div class="col-md-4 step-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Step 3: Get Prediction</h4>
+                    <p>Receive a detailed report with the estimated price.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Old Bike Price Prediction App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

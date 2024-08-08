@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Bike Price Prediction App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #000000; /* Dark background */
+            color: #ffffff; /* Light text */
+        }
+        .jumbotron {
+            background: #000000; /* Darker jumbotron */
+            color: white;
+            padding: 2rem;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #007bff; /* Light blue for icons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron mt-5 text-center">
+            <h1 class="display-4">Welcome to the Old Bike Price Prediction App</h1>
+            <p class="lead">Predict the price of your old bike based on your input.</p>
+            <a href="{{ url_for('predict') }}" class="btn btn-light btn-lg">Get Started</a>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Accurate Predictions</h3>
+                <p>Utilize advanced algorithms to get precise bike price predictions.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Secure & Reliable</h3>
+                <p>Your data is handled securely with the highest standards.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-icon">
+                    <i class="fas fa-thumbs-up"></i>
+                </div>
+                <h3>User Friendly</h3>
+                <p>Easy to use interface designed for a seamless experience.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <h2>How It Works</h2>
+                <p>Follow these simple steps to get your bike price predictions:</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-pencil-alt fa-3x"></i>
+                <h4>Step 1: Enter Bike Details</h4>
+                <p>Provide details about your bike such as model, year, and condition.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-cogs fa-3x"></i>
+                <h4>Step 2: Processing</h4>
+                <p>Our system processes your input using advanced algorithms.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-file-alt fa-3x"></i>
+                <h4>Step 3: Get Your Prediction</h4>
+                <p>Receive an accurate prediction of your bike's market value.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

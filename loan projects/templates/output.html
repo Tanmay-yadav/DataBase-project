@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+            background-image: url('/static/loan2.png'); /* Background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            text-align: center; /* Centered text */
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .result-container {
+            padding: 20px;
+        }
+
+        .result-message {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background: rgba(253, 253, 253, 0.9); /* Light background for the result message */
+            border: 1px solid #eaeaea; /* Light border for separation */
+            max-height: 300px; /* Fixed height for scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
+            color: #007bff; /* Change text color to blue */
+        }
+
+        .result-message strong {
+            display: block; /* Stack the strong elements */
+            margin: 5px 0; /* Add space between items */
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s; /* Added transform for scaling effect */
+            font-size: 16px; /* Larger font size for better readability */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            .btn {
+                width: 100%; /* Full width button on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Loan Application Portal</h1>
+            <p>Your loan application result is ready!</p>
+        </header>
+
+        <div class="result-container">
+            <h2>Application Result</h2>
+            <div class="result-message {{ 'approved' if result == 'Approved' else 'rejected' }}">
+                <p><strong>Result:</strong> {{ result }}</p>
+                <p><strong>Dependents:</strong> {{ no_of_dependents }}</p>
+                <p><strong>Annual Income:</strong> ₹{{ income_annum }}</p>
+                <p><strong>Loan Amount:</strong> ₹{{ loan_amount }}</p>
+                <p><strong>Loan Term:</strong> {{ loan_term }} Months</p>
+                <p><strong>CIBIL Score:</strong> {{ cibil_score }}</p>
+                <p><strong>Residential Assets:</strong> ₹{{ residential_assets_value }}</p>
+                <p><strong>Commercial Assets:</strong> ₹{{ commercial_assets_value }}</p>
+                <p><strong>Luxury Assets:</strong> ₹{{ luxury_assets_value }}</p>
+                <p><strong>Bank Assets:</strong> ₹{{ bank_asset_value }}</p>
+                <p><strong>Not a Graduate:</strong> {{ education_not_graduate }}</p>
+                <p><strong>Self Employed:</strong> {{ self_employed }}</p>
+            </div>
+            <div class="button-container">
+                <a href="/" class="btn">Apply Again</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

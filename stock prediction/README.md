@@ -66,7 +66,7 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions or feedback, you can reach out to Tanmay Yadav at [LInedIN:].
+For any questions or feedback, you can reach out to Tanmay Yadav at [LInedIN:https://www.linkedin.com/in/tanmay-yadav-277698233/].
 
 ---
 

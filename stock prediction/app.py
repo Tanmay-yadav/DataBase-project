@@ -28,7 +28,7 @@ with pricing_data:
 from alpha_vantage.fundamentaldata import FundamentalData
 
 # Initialize the Alpha Vantage API
-API_KEY = 'OW1639L63B5UCYYL'  # Replace with your API key
+API_KEY = 'your api key here'  # Replace with your API key
 fd = FundamentalData(API_KEY, output_format='pandas')
 
 # Streamlit App
